@@ -63,3 +63,20 @@ isPangram("The quick brown fox jumps over the lazy dog!");
 
 isPangram("I like cats, but not mice");
 // -> False
+
+
+// Longest Word
+
+function findLongestWord(arr) {
+    
+    let longestWordLength = 0;
+
+    for(let i = 0; i < arr.length; i++) {
+        if (longestWordLength < arr[i].length) longestWordLength = arr[i].length
+    }
+
+    return longestWordLength;
+}
+
+findLongestWord(["hi", "hello"]);
+// -> 5
