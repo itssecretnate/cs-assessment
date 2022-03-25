@@ -1,4 +1,5 @@
 // Sum Zero
+// Runtime: O(n^2)
 
 function addToZero(arr) {
     for(let i = 0; i < arr.length; i++) {
@@ -24,6 +25,7 @@ addToZero([1, 2, 3, -2]);
 
 
 //  Unique Characters
+// O(n^2)
 
 function hasUniqueChars(stringToCheck) {
     for(let i = 0; i < stringToCheck.length; i++) {
@@ -43,6 +45,8 @@ hasUniqueChars("Moonday");
 
 
 // Pangram Sentance
+// Runtime O(n^2)
+
 function isPangram(sentence) {
     sentence = sentence.toLowerCase();
 
@@ -66,9 +70,10 @@ isPangram("I like cats, but not mice");
 
 
 // Longest Word
+// Runtime: O(n)
 
 function findLongestWord(arr) {
-    
+
     let longestWordLength = 0;
 
     for(let i = 0; i < arr.length; i++) {
