@@ -57,6 +57,64 @@ doublerInsert(extraLargeArray);
 let resultsInsert = perf.stop();
 
 
-console.log('Results for the extraLargeArray');
+
+perf.start();
+doublerAppend(largeArray);
+let resultsLargeAppend = perf.stop(); 
+
+perf.start();
+doublerInsert(largeArray);
+let resultsLargeInsert = perf.stop();
+
+
+
+perf.start();
+doublerAppend(mediumArray);
+let resultsMediumAppend = perf.stop(); 
+
+perf.start();
+doublerInsert(mediumArray);
+let resultsMediumInsert = perf.stop();
+
+
+
+perf.start();
+doublerAppend(smallArray);
+let resultsSmallAppend = perf.stop(); 
+
+perf.start();
+doublerInsert(smallArray);
+let resultsSmallInsert = perf.stop();
+
+
+
+perf.start();
+doublerAppend(tinyArray);
+let resultsTinyAppend = perf.stop(); 
+
+perf.start();
+doublerInsert(tinyArray);
+let resultsTinyInsert = perf.stop();
+
+
+
+console.log('Results:');
+console.log('\r\nExtra large')
 console.log("insert", resultsInsert.preciseWords);
 console.log("append", resultsAppend.preciseWords);
+
+console.log('\r\nLarge')
+console.log("insert", resultsLargeInsert.preciseWords);
+console.log("append", resultsLargeAppend.preciseWords);
+
+console.log('\r\nMedium')
+console.log("insert", resultsMediumInsert.preciseWords);
+console.log("append", resultsMediumAppend.preciseWords);
+
+console.log('\r\nSmall')
+console.log("insert", resultsSmallInsert.preciseWords);
+console.log("append", resultsSmallAppend.preciseWords);
+
+console.log('\r\nTiny')
+console.log("insert", resultsTinyInsert.preciseWords);
+console.log("append", resultsTinyAppend.preciseWords);
